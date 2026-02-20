@@ -1,0 +1,91 @@
+.setting {
+    border: 1px solid #989898;
+    border-radius: 1rem;
+    background: var(--containerColor);
+    color: var(--textColor);
+}
+
+.setting .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.setting-checkbox {
+    width: 2.5rem;
+    border-radius: 1rem;
+    border: 2px solid #616161;
+    padding: 0.2rem 0.25rem;
+    cursor: pointer;
+    display: flex;
+    transition: 0.3s;
+    background-color: var(--borderColor);
+}
+
+.setting-checkbox .circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #616161;
+    display: inline-block;
+    transition: 0.3s;
+    position: relative;
+    left: 0;
+}
+
+.circle.checked {
+    left: 100%;
+    transform: translateX(-100%);
+    background-color: #3575ff;
+}
+
+.setting-checkbox:has(.circle.checked) {
+    border: 2px solid #3575ff;
+    background-color: var(--containerColor);
+}
+
+.setting .footer {
+    background: var(--borderColor);
+    padding: 0.6rem 1.1rem;
+}
+
+/* Dark Mode for Settings */
+body.dark .setting {
+    border-color: #475569;
+    background: #1e293b;
+    color: #f1f5f9;
+}
+
+body.dark .setting .header {
+    color: #f1f5f9;
+}
+
+body.dark .setting-checkbox {
+    background-color: #334155;
+    border-color: #475569;
+}
+
+body.dark .setting-checkbox .circle {
+    background-color: #cbd5e1;
+}
+
+body.dark .circle.checked {
+    background-color: #60a5fa;
+}
+
+body.dark .setting-checkbox:has(.circle.checked) {
+    border-color: #60a5fa;
+    background-color: #1e293b;
+}
+
+body.dark .setting .footer {
+    background: #334155;
+    color: #f1f5f9;
+}
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    z-index: -1;
+}

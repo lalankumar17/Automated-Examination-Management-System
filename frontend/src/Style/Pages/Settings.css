@@ -1,0 +1,378 @@
+/* ========================================
+   Settings Page — Premium Professional UI
+   ======================================== */
+
+.settings-page {
+    /* Full width/height for the scrollbar container */
+    padding: 0;
+    max-width: 100%;
+    margin: 0;
+    overflow-y: auto;
+    /* Ensure it fills the available viewport height to scroll properly */
+    height: 100%;
+    min-height: 0;
+}
+
+/* Settings Container - Restores the centered layout */
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    /* Slightly less than page max-width for cleaner look, or match 1400px */
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+/* Combined Card Styles */
+.combined-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-section {
+    padding: 1.5rem;
+}
+
+.about-section-link {
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.about-section-link:hover {
+    background-color: var(--hoverColor, #f8fafc);
+}
+
+.settings-divider {
+    height: 1px;
+    background-color: rgba(203, 213, 225, 1);
+    /* Darker slate-300 for visibility */
+    margin: 0;
+}
+
+/* Specific Section Styles */
+.about-section-link .card-header {
+    margin-bottom: 0;
+}
+
+.about-section-link .card-header-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+}
+
+.about-section-link .card-header-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+
+
+/* Card Base */
+.settings-card {
+    background: var(--containerColor, #ffffff);
+    border-radius: 14px;
+    padding: 1.25rem;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.settings-card:hover {
+    border-color: color-mix(in srgb, var(--accentColor, #6366f1), transparent 60%);
+    box-shadow: 0 4px 20px color-mix(in srgb, var(--accentColor, #6366f1), transparent 75%), 0 0 0 1px color-mix(in srgb, var(--accentColor, #6366f1), transparent 85%);
+}
+
+/* Card Header */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--textColor, #0f172a);
+    margin: 0;
+}
+
+.card-desc {
+    font-size: 0.82rem;
+    color: var(--textColor2, #64748b);
+    margin: 0.1rem 0 0 0;
+}
+
+.card-header-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accentColor, #6366f1), transparent 88%), color-mix(in srgb, var(--accentColor, #6366f1), transparent 80%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.card-header-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--accentColor, #6366f1);
+    color: var(--accentColor, #6366f1);
+}
+
+
+
+/* ========== Theme Switcher ========== */
+.theme-switcher {
+    display: flex;
+    gap: 0.75rem;
+    background: var(--hoverColor, #f1f5f9);
+    border-radius: 12px;
+    padding: 0.4rem;
+}
+
+.theme-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--textColor2, #64748b);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.theme-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+}
+
+.theme-btn:hover {
+    background: var(--containerColor, #ffffff);
+    color: var(--textColor, #334155);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.theme-btn.active {
+    background: var(--containerColor, #ffffff);
+    color: var(--accentColor, #6366f1);
+    border-color: var(--accentColor, #6366f1);
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--accentColor, #6366f1), transparent 80%);
+    font-weight: 600;
+}
+
+.theme-btn.active svg {
+    stroke: var(--accentColor, #6366f1);
+    color: var(--accentColor, #6366f1);
+}
+
+.card-header-icon.accent-icon {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+}
+
+.card-header-icon.accent-icon svg {
+    stroke: #16a34a;
+    color: #16a34a;
+}
+
+/* Accent Picker */
+.accent-picker {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.accent-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background-color: var(--bg-accent);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accent-btn:hover {
+    transform: scale(1.15);
+}
+
+.accent-btn.active {
+    border-color: var(--textColor);
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px var(--containerColor), 0 0 0 4px var(--bg-accent);
+}
+
+.theme-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--textColor2, #94a3b8);
+    margin: 1rem 0 0 0;
+    font-weight: 500;
+}
+
+
+
+/* ========================================
+   Dark Mode Overrides
+   ======================================== */
+
+/* About Us Link Card */
+.aboutus-link-card {
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+}
+
+.aboutus-link-card:hover {
+    border-color: color-mix(in srgb, var(--accentColor, #6366f1), transparent 60%);
+    box-shadow: 0 4px 20px color-mix(in srgb, var(--accentColor, #6366f1), transparent 75%), 0 0 0 1px color-mix(in srgb, var(--accentColor, #6366f1), transparent 85%);
+}
+
+.card-header-icon.aboutus-link-icon {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+}
+
+.card-header-icon.aboutus-link-icon svg {
+    stroke: #3b82f6;
+    color: #3b82f6;
+}
+
+.about-section-link .aboutus-arrow {
+    color: var(--textColor2, #94a3b8);
+    stroke: var(--textColor2, #94a3b8);
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+.about-section-link:hover .aboutus-arrow {
+    transform: translateX(3px);
+    stroke: #6366f1;
+}
+
+body.dark .settings-divider {
+    background-color: rgba(71, 85, 105, 1);
+    /* Slate-600 for better contrast */
+}
+
+body.dark .about-section-link:hover {
+    background-color: rgba(30, 41, 59, 0.5);
+}
+
+body.dark .aboutus-arrow {
+    stroke: #64748b;
+}
+
+body.dark .about-section-link:hover .aboutus-arrow {
+    stroke: #a78bfa;
+}
+
+body.dark .settings-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .settings-card:hover {
+    border-color: color-mix(in srgb, var(--accentColor, #6366f1), transparent 40%);
+    box-shadow: 0 4px 25px color-mix(in srgb, var(--accentColor, #6366f1), transparent 60%), 0 0 0 1px color-mix(in srgb, var(--accentColor, #6366f1), transparent 70%);
+}
+
+body.dark .card-header h2 {
+    color: #f1f5f9;
+}
+
+body.dark .card-desc {
+    color: #94a3b8;
+}
+
+body.dark .card-header-icon {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+}
+
+body.dark .card-header-icon svg {
+    stroke: #a78bfa;
+    color: #a78bfa;
+}
+
+
+
+body.dark .card-header-icon.accent-icon {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(52, 211, 153, 0.15));
+}
+
+body.dark .card-header-icon.accent-icon svg {
+    stroke: #34d399;
+    color: #34d399;
+}
+
+body.dark .theme-switcher {
+    background: #0f172a;
+}
+
+body.dark .theme-btn {
+    color: #94a3b8;
+}
+
+body.dark .theme-btn:hover {
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+body.dark .theme-btn.active {
+    background: #1e293b;
+    color: #a78bfa;
+    border-color: #a78bfa;
+    box-shadow: 0 2px 8px rgba(167, 139, 250, 0.2);
+}
+
+body.dark .theme-btn.active svg {
+    stroke: #a78bfa;
+    color: #a78bfa;
+}
+
+body.dark .theme-hint {
+    color: #64748b;
+}
+
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 640px) {
+    .settings-page {
+        padding: 1rem;
+    }
+
+
+
+    .theme-switcher {
+        flex-direction: column;
+    }
+
+    .settings-container {
+        padding: 1rem;
+    }
+
+
+}
