@@ -33,7 +33,7 @@
 
 .menubar-container .title {
     font-size: 1.5rem;
-    color: #1479FF;
+    color: #25D366;
     font-weight: bold;
     font-family: 'Lobster', cursive;
     margin: 0 auto;
@@ -86,7 +86,7 @@ body.dark .menubar-container .title .dark-logo {
     display: none;
     font-family: 'Lobster', cursive;
     font-size: 1.8rem;
-    background: linear-gradient(135deg, #1479FF, #00d4ff);
+    background: linear-gradient(135deg, #25D366, #00d4ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -107,7 +107,7 @@ body.dark .menubar-container .title .dark-logo {
     font-size: 1.8rem;
     margin-top: 2rem;
     font-family: 'Lobster', cursive;
-    background: linear-gradient(135deg, #1479FF, #00d4ff);
+    background: linear-gradient(135deg, #25D366, #00d4ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -116,7 +116,7 @@ body.dark .menubar-container .title .dark-logo {
 
 @keyframes blinkColor {
     0% {
-        color: #1479FF;
+        color: #25D366;
     }
 
     33% {
@@ -128,7 +128,7 @@ body.dark .menubar-container .title .dark-logo {
     }
 
     100% {
-        color: #1479FF;
+        color: #25D366;
     }
 }
 

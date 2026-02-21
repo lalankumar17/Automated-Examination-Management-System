@@ -25,24 +25,10 @@ function DashboardPage() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    // Periodic Health Check (every 30 seconds)
     useEffect(() => {
-        const checkHealth = async () => {
-            const healthStatus = await getHealthStatus();
-            setHealth(healthStatus);
-            if (healthStatus.backend === 'Disconnected') {
-                addNotification('Backend system is disconnected', 'error', 0);
-            } else if (healthStatus.backend === 'OK') {
-                removeNotificationByMessage('Backend system is disconnected');
-            }
-        };
-
-        // Check immediately on mount
-        checkHealth();
-
-        const interval = setInterval(checkHealth, 30000);
-        return () => clearInterval(interval);
-    }, [addNotification, removeNotificationByMessage]);
+        loadData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const loadData = async () => {
         setLoading(true);
@@ -95,7 +81,7 @@ function DashboardPage() {
                 <div className='welcome-card'>
                     <div className='welcome-content-wrapper'>
                         <div className='welcome-header'>
-                            <h1>Welcome, Coordinator</h1>
+                            <h1>Timetable Generator</h1>
                             <p>Manage curriculum & exams.</p>
                             <Link to="/ExamTimetable" className='btn-light btn-sm'>+ New Schedule</Link>
                         </div>

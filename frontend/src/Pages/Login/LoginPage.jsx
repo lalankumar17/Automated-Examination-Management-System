@@ -16,7 +16,6 @@ function LoginPage() {
     const [showPassword, setShowPassword] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
-
     const navigate = useNavigate();
     const { login } = useAuth(); // kept for logic, though template doesn't show it explicitly, logic remains
 

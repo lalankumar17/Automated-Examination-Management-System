@@ -30,7 +30,8 @@ import "./Style/UnifiedPages.css"
 import { AlertProvider } from './Components/AlertContextProvider';
 import { ConfirmProvider } from './Components/ConfirmContextProvider';
 import { AuthProvider, useAuth } from './Components/AuthContext';
-import { NotificationProvider } from './Components/NotificationContext';
+import { NotificationProvider, useNotifications } from './Components/NotificationContext';
+import { getHealthStatus } from './Script/HealthFetcher';
 
 function ProtectedRoute({ children }) {
 	const { user, loading } = useAuth();
@@ -43,12 +44,37 @@ function ProtectedRoute({ children }) {
 	return children;
 }
 
+function GlobalHealthCheck() {
+	const { addNotification, removeNotificationByMessage } = useNotifications();
+	const [isDisconnected, setIsDisconnected] = useState(false);
+
+	useEffect(() => {
+		const checkHealth = async () => {
+			const healthStatus = await getHealthStatus();
+			if (healthStatus.backend === 'Disconnected') {
+				addNotification('Backend system is disconnected', 'error', 0);
+				setIsDisconnected(true);
+			} else if (healthStatus.backend === 'OK') {
+				removeNotificationByMessage('Backend system is disconnected');
+				setIsDisconnected(false);
+			}
+		};
+
+		checkHealth();
+		const interval = setInterval(checkHealth, isDisconnected ? 3000 : 30000);
+		return () => clearInterval(interval);
+	}, [addNotification, removeNotificationByMessage, isDisconnected]);
+
+	return null;
+}
+
 function App() {
 	return (
 		<AlertProvider>
 			<ConfirmProvider>
 				<AuthProvider>
 					<NotificationProvider>
+						<GlobalHealthCheck />
 						<BrowserRouter>
 							<MainApp />
 						</BrowserRouter>

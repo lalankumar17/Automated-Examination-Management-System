@@ -38,10 +38,10 @@ function SettingsPage() {
 
     const accents = [
         { name: 'Blue', color: '#2563eb' },
-        { name: 'Purple', color: '#9333ea' },
-        { name: 'Emerald', color: '#10b981' },
-        { name: 'Rose', color: '#f43f5e' },
-        { name: 'Amber', color: '#f59e0b' }
+        { name: 'Pink', color: '#d60aab' },
+        { name: 'Green', color: '#25D366' },
+        { name: 'Red', color: '#EF4444' },
+        { name: 'Yellow', color: '#eab308' }
     ];
 
     useEffect(() => {

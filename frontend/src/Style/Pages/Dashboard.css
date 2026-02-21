@@ -40,7 +40,8 @@
 }
 
 .welcome-card {
-    background: linear-gradient(135deg, #312e81 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    /* Original blue gradient based on image */
     color: white;
     padding: 0.75rem 1.25rem;
     border-radius: 16px;
@@ -125,6 +126,7 @@
     font-weight: 800;
     letter-spacing: -0.025em;
     line-height: 1.2;
+    color: #25D366;
 }
 
 .welcome-header p {
@@ -134,6 +136,7 @@
     font-weight: 500;
     max-width: 400px;
     line-height: 1.4;
+    color: #25D366;
 }
 
 .btn-sm {

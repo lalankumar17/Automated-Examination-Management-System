@@ -490,33 +490,44 @@ body.light .tech-card p {
 }
 
 .tech-tag.react {
-    background-color: rgba(97, 218, 251, 0.1);
-    color: #61dafb !important;
+    background-color: #122c34;
+    /* Darker cyan-tinged background */
+    color: #4cd5ff !important;
+    /* Lighter cyan text */
 }
 
 .tech-tag.springboot {
-    background-color: rgba(109, 179, 63, 0.1);
-    color: #6db33f !important;
+    background-color: #182e16;
+    /* Darker green background */
+    color: #5ed64c !important;
+    /* Lighter green text */
 }
 
 .tech-tag.mongodb {
-    background-color: rgba(0, 237, 100, 0.1);
-    color: #00ED64 !important;
+    background-color: #0b3419;
+    /* Darker emerald background */
+    color: #0ced64 !important;
+    /* Lighter emerald text */
 }
 
 .tech-tag.vite {
-    background-color: rgba(189, 52, 254, 0.1);
-    color: #bd34fe !important;
+    background-color: #a4a4f8;
+    /* Softer, slightly dimmer light purple */
+    color: #3b0764 !important;
 }
 
 .tech-tag.netlify {
-    background-color: rgba(0, 199, 183, 0.1);
-    color: #00C7B7 !important;
+    background-color: #1a9e88;
+    /* Dimmer teal/cyan background */
+    color: #042f2e !important;
+    /* Dark teal/black text for contrast */
 }
 
 .tech-tag.render {
-    background-color: rgba(70, 227, 183, 0.1);
-    color: #46E3B7 !important;
+    background-color: #23074d;
+    /* deep purple background */
+    color: #e9d5ff !important;
+    /* brighter light purple text for high contrast */
 }
 
 @media (max-width: 768px) {
