@@ -40,8 +40,8 @@
 }
 
 .welcome-card {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    /* Original blue gradient based on image */
+    background: linear-gradient(135deg, #0a2540 0%, #1e40af 50%, #3b82f6 100%);
+    /* Professional sleek blue gradient */
     color: white;
     padding: 0.75rem 1.25rem;
     border-radius: 16px;
@@ -49,9 +49,10 @@
     flex-direction: column;
     justify-content: center;
     gap: 0.75rem;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.25), 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .welcome-content-wrapper {
@@ -126,7 +127,7 @@
     font-weight: 800;
     letter-spacing: -0.025em;
     line-height: 1.2;
-    color: #25D366;
+    color: white;
 }
 
 .welcome-header p {
@@ -136,7 +137,7 @@
     font-weight: 500;
     max-width: 400px;
     line-height: 1.4;
-    color: #25D366;
+    color: white;
 }
 
 .btn-sm {
@@ -160,27 +161,26 @@
 }
 
 /* High specificity to ensure visibility in both Light and Dark modes */
-/* Ghost button style for the purple card */
 .welcome-card .btn-light {
-    background: rgba(255, 255, 255, 0.1) !important;
-    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(8px);
     color: white !important;
-    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
     font-weight: 600 !important;
     border-radius: 8px !important;
     padding: 0.6rem 1.4rem !important;
     font-size: 0.9rem !important;
-    box-shadow: none !important;
-    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 2;
 }
 
 .welcome-card .btn-light:hover {
-    background: rgba(255, 255, 255, 0.2) !important;
-    border-color: white !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
 }
 
 .mini-stats {
@@ -1392,6 +1392,12 @@ body.dark .welcome-card {
     border: 1px solid color-mix(in srgb, var(--accentColor, #6366f1), transparent 70%);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+body.dark .welcome-header h1,
+body.dark .welcome-header p {
+    color: white !important;
+}
+
 
 body.dark .welcome-card:hover {
     border-color: color-mix(in srgb, var(--accentColor, #6366f1), transparent 40%);

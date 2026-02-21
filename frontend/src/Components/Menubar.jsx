@@ -70,11 +70,10 @@ const Menubar = ({ onMenuToggleClick = () => { } }) => {
         }
 
         showConfirm(
-            `Log out of AEMS as ${user?.email || 'user'}?`,
+            `Sign out of '${user?.name || user?.username || 'User'}'?`,
             {
-                title: 'Are you sure you want to log out?',
                 // theme: 'dark', // Removed to use standard VS Code style
-                confirmText: 'Log out',
+                confirmText: 'Sign Out',
                 cancelText: 'Cancel',
                 onApprove: logout
             }

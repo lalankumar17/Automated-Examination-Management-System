@@ -107,7 +107,7 @@ const DocsPage = () => {
     }, [activeSection]);
 
     const sidebarLinks = [
-        { id: 'introduction', label: 'Introduction' },
+        { id: 'introduction', label: 'Overview' },
         { id: 'getting-started', label: 'Getting Started' },
         { id: 'authentication', label: 'User Authentication' },
         { id: 'dashboard', label: 'Dashboard' },
@@ -122,7 +122,7 @@ const DocsPage = () => {
         <div className="docs-container">
             <aside className="docs-sidebar">
                 <div className="docs-sidebar-header">
-                    <h3>User Manual</h3>
+                    <h3>Guide</h3>
                 </div>
                 <nav className="docs-nav">
                     <ul>

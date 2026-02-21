@@ -113,9 +113,9 @@
     font-size: 0.68rem;
     font-weight: 700;
     letter-spacing: 0.12em;
-    color: var(--accentColor, #10b981);
-    background: color-mix(in srgb, var(--accentColor, #10b981), transparent 90%);
-    border: 1px solid color-mix(in srgb, var(--accentColor, #10b981), transparent 80%);
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
     padding: 0.3rem 0.9rem;
     border-radius: 20px;
     margin-bottom: 1rem;
@@ -150,9 +150,9 @@
 }
 
 body.dark .docs-hero-badge {
-    color: var(--accentColor, #10b981);
-    background: color-mix(in srgb, var(--accentColor, #10b981), transparent 88%);
-    border-color: color-mix(in srgb, var(--accentColor, #10b981), transparent 75%);
+    color: #34d399;
+    background: rgba(16, 185, 129, 0.12);
+    border-color: rgba(16, 185, 129, 0.25);
 }
 
 body.dark .docs-hero-title {
